@@ -1,0 +1,16 @@
+/*#*/
+
+.header-container {
+  background-color: #202529;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.search-input {
+  width: 18%;
+  padding: 0.2rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}

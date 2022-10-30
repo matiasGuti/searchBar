@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import BarraBuscador from './components/BarraBuscador';
+import FormularioColaborador from './components/FormularioColaborador';
+import { BaseColaboradores } from './data/BaseColaboradores.js';
 
 function App() {
+  const [filtro, setFiltro] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <BarraBuscador actualizarFiltro={setFiltro}/>
+      <FormularioColaborador listaInicialColaboradores={BaseColaboradores} filtro={filtro} />
     </div>
   );
 }
